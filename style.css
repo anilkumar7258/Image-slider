@@ -1,0 +1,40 @@
+body{
+    background: #202020;
+}
+.Gallery{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+.Gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns:auto auto auto ;
+    grid-gap:20px;
+    padding: 10px;
+    flex:none;
+}
+.Gallery div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+.Gallery::-webkit-scrollbar{
+    display: none;
+}
+.Gallery-Wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+#backBtn,nextBtn{
+    width:50px;
+    cursor:pointer;
+    margin:40px;
+}
+.Gallery div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
